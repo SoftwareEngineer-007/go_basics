@@ -11,25 +11,25 @@ import (
 )
 
 func main() {
-	fmt.Print("Enter a grade: ")
-	reader := bufio.NewReader(os.Stdin)
-	input, err := reader.ReadString('\n')
+	fmt.Print("Enter a grade: ")          // запрашиваем у пользователя значение
+	reader := bufio.NewReader(os.Stdin)   // конструкция для чтения ввода с клавиатуры
+	input, err := reader.ReadString('\n') // чтение данных
 	if err != nil {
-		log.Fatal(err)
+		log.Fatal(err) // если ошибка, выведет сообщение и закроет программу
 	}
 
-	input = strings.TrimSpace(input)
-	grade, err := strconv.ParseFloat(input, 64)
+	input = strings.TrimSpace(input)            // удалит символ новой строки
+	grade, err := strconv.ParseFloat(input, 64) // преобразует введенную строку в float64
 	if err != nil {
-		log.Fatal(err)
+		log.Fatal(err) // если ошибка, выведет сообщение и закроет программу
 	}
 
-	var status string
+	var status string // объявляем переменную здесь, чтоб находилась в области видимости
 
-	if grade >= 60 {
+	if grade >= 60 { // проверка
 		status = "passing"
 	} else {
 		status = "failing"
 	}
-	fmt.Println("A grade of", grade, "is", status)
+	fmt.Println("A grade of", grade, "is", status) // вывод введенного значения и результата сдачи
 }
