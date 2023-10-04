@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+)
 
 func paitNeeded(width float64, height float64) (float64, error) {
 	if width < 0 {
@@ -15,6 +18,9 @@ func paitNeeded(width float64, height float64) (float64, error) {
 
 func main() {
 	amount, err := paitNeeded(4.2, -3.0)
-	fmt.Println(err)
-	fmt.Printf("%0.2f liters need\n", amount)
+	if err != nil {
+		log.Fatal(err)
+	} else {
+		fmt.Printf("%0.2f liters need\n", amount)
+	}
 }
