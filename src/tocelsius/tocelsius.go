@@ -9,7 +9,7 @@ import (
 
 func main() {
 	fmt.Print("Enter a temperature in Fahrenheit: ")
-	fahrenheit, err := keyboard.GetFloat() // вызываем функцию для получения температуры
+	fahrenheit, err := keyboard.GetFloat() // вызываем функцию из пакета keyboard
 	if err != nil {
 		log.Fatal(err) // если ошибка, выведет сообщение и закроет программу
 	}
