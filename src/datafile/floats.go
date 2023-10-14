@@ -10,7 +10,7 @@ import (
 // GetFloats читает значение float64 из каждой строки файла
 func GetFloats(fileName string) ([3]float64, error) {
 	var numbers [3]float64
-	filr, err := os.Open(fileName)
+	file, err := os.Open(fileName)
 	if err != nil {
 		return numbers, err
 	}
