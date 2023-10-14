@@ -2,14 +2,14 @@
 package main
 
 import (
-	datafile "command-line-argumentsD:\\Projects\\go_basics\\src\\datafile\\floats.go"
 	"fmt"
 	"log"
+	datafile "src/datafile/floats.go"
 )
 
 func main() {
 	numbers, err := datafile.GetFloats("data.txt")
-	if err != nill {
+	if err != nil {
 		log.Fatal(err)
 	}
 	var sum float64 = 0
