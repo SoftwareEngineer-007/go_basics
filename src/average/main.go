@@ -4,7 +4,7 @@ package main
 import (
 	"fmt"
 	"log"
-	datafile "src/datafile/floats.go"
+	"src/datafile/"
 )
 
 func main() {
