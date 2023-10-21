@@ -16,5 +16,7 @@ func main() {
 	for _, line := range lines {
 		counts[line]++ // увеличиваем счетчик голосов
 	}
-	fmt.Println(counts) // выводит заполненную карту
+	for name, count := range counts {
+		fmt.Printf("Votes for %s: %d\n", name, count)
+	}
 }
