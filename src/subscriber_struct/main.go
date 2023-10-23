@@ -8,18 +8,18 @@ type subscriber struct {
 	active bool
 }
 
-func printInfo(s subscriber) {
+func printInfo(s subscriber) { // Объявляется один параметр с типом "subskriber"
 	fmt.Println("Name:", s.name)
 	fmt.Println("Monthly rate:", s.rate)
 	fmt.Println("Active?", s.active)
 }
 
-func defaultSubscriber(name string) subscriber {
-	var s subscriber
+func defaultSubscriber(name string) subscriber { //возвращает значение "subskriber"
+	var s subscriber // создается новое значение "subskriber"
 	s.name = name
 	s.rate = 5.99
 	s.active = true
-	return s
+	return s // возвращает "subskriber"
 }
 
 func main() {
