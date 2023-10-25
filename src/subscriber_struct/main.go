@@ -30,9 +30,10 @@ func applyDiscount(s *subscriber) {
 }
 
 func main() {
-	var employee magazine.Employee
-	employee.Name = "Joy Carr"
-	employee.Salary = 60000
-	fmt.Println(employee.Name)
-	fmt.Println(employee.Salary)
+	var address magazine.Address
+	address.Street = "123 Oak St"
+	address.City = "Omaha"
+	address.State = "NE"
+	address.PostalCode = "68111"
+	fmt.Println(address)
 }
