@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	magazine "command-line-argumentsD:\\Projects\\go_basics\\src\\magazine\\magazine.go"
+	"fmt"
+)
 
 type subscriber struct {
 	name   string
@@ -27,10 +30,9 @@ func applyDiscount(s *subscriber) {
 }
 
 func main() {
-	subscriber1 := defaultSubscriber("Aman Singh") // не структура, а указатель на структуру
-	applyDiscount(subscriber1)
-	printInfo(subscriber1)
-
-	subscriber2 := defaultSubscriber("Beth Ryan")
-	printInfo(subscriber2)
+	var employee magazine.Employee
+	employee.Name = "Joy Carr"
+	employee.Salary = 60000
+	fmt.Println(employee.Name)
+	fmt.Println(employee.Salary)
 }
