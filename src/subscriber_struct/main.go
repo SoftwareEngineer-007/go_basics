@@ -30,10 +30,8 @@ func applyDiscount(s *subscriber) {
 }
 
 func main() {
-	var address magazine.Address
-	address.Street = "123 Oak St"
-	address.City = "Omaha"
-	address.State = "NE"
-	address.PostalCode = "68111"
-	fmt.Println(address)
+	address := magazine.Address{Street: "123 Oak St", City: "Omaha", State: "NE", PostalCode: "68111"}
+	subscriber := magazine.Subscriber{Name: "Aman Singh"}
+	subscriber.HomeAddress = address
+	fmt.Println(subscriber.HomeAddress)
 }
