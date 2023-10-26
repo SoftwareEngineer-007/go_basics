@@ -29,9 +29,9 @@ func applyDiscount(s *subscriber) {
 	s.rate = 4.99
 }
 
-func main() {
+func main() { // создание значения Address с заполнением полей
 	address := magazine.Address{Street: "123 Oak St", City: "Omaha", State: "NE", PostalCode: "68111"}
-	subscriber := magazine.Subscriber{Name: "Aman Singh"}
-	subscriber.HomeAddress = address
+	subscriber := magazine.Subscriber{Name: "Aman Singh"} // создание структуры Subscriber
+	subscriber.HomeAddress = address                      // инициализирует поле HomeAddress
 	fmt.Println(subscriber.HomeAddress)
 }
