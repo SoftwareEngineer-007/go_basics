@@ -8,6 +8,18 @@ type Date struct {
 	day   int
 }
 
+func (d *Date) Year() int {
+	return d.year // возвращает значение поля
+}
+
+func (d *Date) Month() int {
+	return d.month
+}
+
+func (d *Date) Day() int {
+	return d.day
+}
+
 func (d *Date) SetYear(year int) error {
 	if year < 1 {
 		return errors.New("invalid year")
