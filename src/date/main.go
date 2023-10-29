@@ -20,7 +20,7 @@ func (d *Date) SetYear(year int) error {
 	return nil
 }
 
-func (d *Date) SetMonth(month int) {
+func (d *Date) SetMonth(month int) error {
 	if month < 1 || month > 12 {
 		return errors.New("invalid month")
 	}
@@ -28,7 +28,7 @@ func (d *Date) SetMonth(month int) {
 	return nil
 }
 
-func (d *Date) SetDay(day int) {
+func (d *Date) SetDay(day int) error {
 	if day < 1 || day > 31 {
 		return errors.New("invalid day")
 	}
