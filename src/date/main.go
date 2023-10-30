@@ -8,6 +8,10 @@ import (
 
 func main() {
 	event := calendar.Event{}
+	err := event.SetTitle("An extremely long and impractical title")
+	if err != nil {
+		log.Fatal(err)
+	}
 	err := event.SetYear(2023) // set-метод типа Date был повышен до Event
 	if err != nil {
 		log.Fatal(err)
