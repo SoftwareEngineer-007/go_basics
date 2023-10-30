@@ -7,20 +7,20 @@ import (
 )
 
 func main() {
-	date := calendar.Date{}
-	err := date.SetYear(2023) // испоьзуется set-метод
+	event := calendar.Event{}
+	err := event.SetYear(2023) // set-метод типа Date был повышен до Event
 	if err != nil {
 		log.Fatal(err)
 	}
-	err = date.SetMonth(10) // испоьзуется set-метод
+	err = event.SetMonth(10) // set-метод типа Date был повышен до Event
 	if err != nil {
 		log.Fatal(err)
 	}
-	err = date.SetDay(29) // испоьзуется set-метод
+	err = event.SetDay(29) // set-метод типа Date был повышен до Event
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(date.Year())
-	fmt.Println(date.Month())
-	fmt.Println(date.Day())
+	fmt.Println(event.Year())
+	fmt.Println(event.Month())
+	fmt.Println(event.Day())
 }
