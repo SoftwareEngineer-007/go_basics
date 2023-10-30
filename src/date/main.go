@@ -8,11 +8,11 @@ import (
 
 func main() {
 	event := calendar.Event{}
-	err := event.SetTitle("An extremely long and impractical title")
+	err := event.SetTitle("Mom's birthday") // определяется для типа Event
 	if err != nil {
 		log.Fatal(err)
 	}
-	err := event.SetYear(2023) // set-метод типа Date был повышен до Event
+	err = event.SetYear(2023) // set-метод типа Date был повышен до Event
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -24,7 +24,8 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(event.Year())
-	fmt.Println(event.Month())
-	fmt.Println(event.Day())
+	fmt.Println(event.Title()) // определяется для типа Event
+	fmt.Println(event.Year())  // определяется для типа Date
+	fmt.Println(event.Month()) // определяется для типа Date
+	fmt.Println(event.Day())   // определяется для типа Date
 }
