@@ -1,6 +1,6 @@
 package main
 
-import gadget "command-line-argumentsD:\\Projects\\go_basics\\src\\gadget\\tape.go"
+import "src/gadget"
 
 func playList(device gadget.TapePlayer, songs []string) {
 	for _, song := range songs { // перебираем все песни в цикле
