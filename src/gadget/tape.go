@@ -2,6 +2,7 @@ package gadget
 
 import "fmt"
 
+// ...определение типа TapePlayer...
 type TapePlayer struct {
 	Batteries string
 }
@@ -13,6 +14,7 @@ func (t TapePlayer) Stop() {
 	fmt.Println("Stopped!")
 }
 
+// ...определение типа TapeRecorder...
 type TapeRecorder struct {
 	Microphones int
 }
